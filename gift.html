@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gifts for You 🎁</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      padding: 30px;
+    }
+    .gift {
+      background: #ffb3c6;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .message {
+      display: none;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Open Your Gifts 🎁💝</h1>
+
+<div class="gift" onclick="toggle('m1')">🎁 Gift 1</div>
+<div id="m1" class="message">
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+I love you ❣️😘
+<br><br>
+(Imagine this written 100 times with all my heart ❤️)
+</div>
+
+<div class="gift" onclick="toggle('m2')">🎁 Gift 2</div>
+<div id="m2" class="message">
+You are the reason my days feel brighter and my nights feel calmer.
+Your smile makes my heart forget every worry.
+Every moment with you feels special, and every thought of you makes me happy.
+I don’t need anything else in this world if I have you beside me.
+</div>
+
+<div class="gift" onclick="toggle('m3')">🎁 Gift 3</div>
+<div id="m3" class="message">
+Loving you feels natural, peaceful, and beautiful.
+You are my comfort, my happiness, and my safe place.
+I promise to care, respect, and love you in every way I can.
+You mean more to me than words can ever explain.
+</div>
+
+<button onclick="goFinal()">Final Surprise ❤️</button>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+  }
+
+  function goFinal() {
+    window.location.href = "final.html";
+  }
+</script>
+
+</body>
+</html>
