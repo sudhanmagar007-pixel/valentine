@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Valentine 💖</title>
+  <title>Will You Be My Valentine 💖</title>
   <style>
     body {
+      background: #ffe6f0;
       text-align: center;
       font-family: Arial, sans-serif;
-      background: #ffe6eb;
-      margin-top: 100px;
+      padding-top: 120px;
+      overflow: hidden;
     }
     button {
-      font-size: 20px;
-      padding: 10px 25px;
-      margin: 15px;
-      border-radius: 10px;
+      font-size: 22px;
+      padding: 12px 28px;
+      margin: 20px;
+      border-radius: 30px;
       border: none;
       cursor: pointer;
     }
-    #yes {
-      background: #ff4d6d;
-      color: white;
-    }
-    #no {
-      background: #999;
-      color: white;
-    }
+    #yes { background: #ff4d6d; color: white; }
+    #no { background: #aaa; color: white; position: relative; }
   </style>
 </head>
-
 <body>
-  <h1>Will you be my Valentine? 💖</h1>
 
-  <button id="yes" onclick="goGift()">Yes</button>
-  <button id="no" onclick="noClick()">No</button>
+<h1>Will you be my Valentine? 💘</h1>
 
-  <script>
-    let count = 0;
-    const noBtn = document.getElementById("no");
+<button id="yes" onclick="goYes()">YES 💖</button>
+<button id="no" onclick="noClick()">NO 😁</button>
 
-    function noClick() {
-      count++;
+<script>
+let n = 0;
+function noClick() {
+  const no = document.getElementById("no");
+  n++;
+  const texts = [
+    "Are you sure?",
+    "Please don't 🥺",
+    "I will be sad 😢",
+    "You should click YES 😁"
+  ];
+  if (n <= 4) {
+    no.innerText = texts[n-1];
+  } else {
+    no.style.left = Math.random()*200 - 100 + "px";
+    no.style.top = Math.random()*200 - 100 + "px";
+  }
+}
+function goYes() {
+  window.location.href = "gift.html?music=1";
+}
+</script>
 
-      if (count === 1) {
-        noBtn.innerText = "Are you sure?";
-      } else if (count === 2) {
-        noBtn.innerText = "Please don't do that 🥺";
-      } else if (count === 3) {
-        noBtn.innerText = "I will be sad 😢";
-      } else if (count === 4) {
-        noBtn.innerText = "No 😁 you should click YES";
-      } else {
-        const x = Math.random() * (window.innerWidth - 120);
-        const y = Math.random() * (window.innerHeight - 120);
-        noBtn.style.position = "absolute";
-        noBtn.style.left = x + "px";
-        noBtn.style.top = y + "px";
-      }
-    }
-
-    function goGift() {
-      window.location.href = "gift.html";
-    }
-  </script>
 </body>
 </html>
