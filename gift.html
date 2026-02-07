@@ -8,85 +8,108 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 30px;
+      overflow: hidden;
     }
     .gift {
       background: #ff4d6d;
       color: white;
       padding: 15px;
       margin: 15px auto;
-      width: 200px;
-      border-radius: 15px;
+      width: 220px;
+      border-radius: 25px;
+      font-size: 20px;
       cursor: pointer;
-      font-size: 18px;
     }
-    .message {
+    .msg {
       display: none;
       background: white;
       padding: 20px;
-      border-radius: 15px;
-      margin: 10px auto;
-      width: 85%;
+      border-radius: 20px;
+      margin: 15px auto;
+      width: 90%;
+      line-height: 1.7;
     }
     button {
       margin-top: 20px;
-      padding: 12px 25px;
+      padding: 12px 30px;
       font-size: 18px;
-      border-radius: 12px;
+      border-radius: 25px;
       border: none;
       background: #ff4d6d;
       color: white;
-      cursor: pointer;
+    }
+    .heart {
+      position: fixed;
+      color: pink;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-800px); opacity: 0; }
     }
   </style>
 </head>
-
 <body>
-  <h1>Your Gifts 🎁💖</h1>
 
-  <!-- Gift 1 -->
-  <div class="gift" onclick="toggle('m1')">🎁 Gift 1</div>
-  <div id="m1" class="message">
-    From the moment you came into my life, everything started to feel brighter.
-    Your smile gives me peace, your voice gives me comfort, and your presence
-    makes everything feel right. I love the way you understand me even when I
-    say nothing at all. Being with you feels natural, safe, and beautiful.
-    You are my happiness, my calm, and my favorite thought every single day.
-  </div>
+<audio id="music" loop>
+  <source src="nothing_on_you.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Gift 2 -->
-  <div class="gift" onclick="toggle('m2')">🎁 Gift 2</div>
-  <div id="m2" class="message">
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
-  </div>
+<h1>Your Valentine Gifts 🎁💖</h1>
 
-  <!-- Gift 3 -->
-  <div class="gift" onclick="toggle('m3')">🎁 Gift 3</div>
-  <div id="m3" class="message">
-    Loving you feels peaceful and warm, like home. You bring joy into my life
-    in ways I never imagined. Every small moment with you matters to me more
-    than anything. I promise to care for you, respect you, and love you with
-    all my heart. You are not just someone I love, you are someone I choose,
-    every day, without hesitation.
-  </div>
+<div class="gift" onclick="toggle('g1')">🎁 Gift 1</div>
+<div id="g1" class="msg">
+From the moment you entered my life, something changed inside me.  
+Everything started to feel warmer, softer, and more meaningful.  
+I love the way small moments with you feel special, even when nothing
+extraordinary is happening. You make ordinary days feel beautiful.
+Your presence brings calm to my mind and happiness to my heart.
+I admire your kindness, your strength, and the way you simply exist.
+This letter is not just words — it’s a piece of my heart written honestly.
+</div>
 
-  <button onclick="goFinal()">Final Surprise ❤️</button>
+<div class="gift" onclick="toggle('g2')">🎁 Gift 2</div>
+<div id="g2" class="msg">
+Loving you is not loud or dramatic — it is gentle and deep.
+It is the comfort of knowing someone exists who makes the world feel lighter.
+Every smile of yours stays in my thoughts longer than it should.
+Every moment shared becomes a memory I protect carefully.
+I don’t need perfection; I just need sincerity, warmth, and understanding.
+You give all of that naturally, without trying.
+This love is patient, respectful, and real — and it is yours.
+</div>
 
-  <script>
-    function toggle(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === "block" ? "none" : "block";
-    }
+<div class="gift" onclick="toggle('g3')">🎁 Gift 3</div>
+<div id="g3" class="msg">
+I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+</div>
 
-    function goFinal() {
-      window.location.href = "final.html";
-    }
-  </script>
+<button onclick="goFinal()">Final Surprise ❤️</button>
+
+<script>
+function toggle(id) {
+  const e = document.getElementById(id);
+  e.style.display = e.style.display === "block" ? "none" : "block";
+}
+function goFinal() {
+  window.location.href = "final.html";
+}
+document.getElementById("music").play().catch(()=>{});
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "💖";
+  h.style.left = Math.random()*100 + "vw";
+  h.style.top = "100vh";
+  h.style.fontSize = Math.random()*20 + 15 + "px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+}, 500);
+</script>
+
 </body>
 </html>
