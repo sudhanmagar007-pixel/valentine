@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Gifts 🎁</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    .gift {
+      background: #ff4d6d;
+      color: white;
+      padding: 15px;
+      margin: 15px auto;
+      width: 200px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .message {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 10px auto;
+      width: 85%;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Your Gifts 🎁💖</h1>
+
+  <!-- Gift 1 -->
+  <div class="gift" onclick="toggle('m1')">🎁 Gift 1</div>
+  <div id="m1" class="message">
+    From the moment you came into my life, everything started to feel brighter.
+    Your smile gives me peace, your voice gives me comfort, and your presence
+    makes everything feel right. I love the way you understand me even when I
+    say nothing at all. Being with you feels natural, safe, and beautiful.
+    You are my happiness, my calm, and my favorite thought every single day.
+  </div>
+
+  <!-- Gift 2 -->
+  <div class="gift" onclick="toggle('m2')">🎁 Gift 2</div>
+  <div id="m2" class="message">
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+    I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘 I love you ❣️😘
+  </div>
+
+  <!-- Gift 3 -->
+  <div class="gift" onclick="toggle('m3')">🎁 Gift 3</div>
+  <div id="m3" class="message">
+    Loving you feels peaceful and warm, like home. You bring joy into my life
+    in ways I never imagined. Every small moment with you matters to me more
+    than anything. I promise to care for you, respect you, and love you with
+    all my heart. You are not just someone I love, you are someone I choose,
+    every day, without hesitation.
+  </div>
+
+  <button onclick="goFinal()">Final Surprise ❤️</button>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+
+    function goFinal() {
+      window.location.href = "final.html";
+    }
+  </script>
+</body>
+</html>
