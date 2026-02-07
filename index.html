@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine 💖</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #ffe6eb;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+      margin: 15px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: #999;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <button id="yes" onclick="goGift()">Yes</button>
+  <button id="no" onclick="noClick()">No</button>
+
+  <script>
+    let count = 0;
+    const noBtn = document.getElementById("no");
+
+    function noClick() {
+      count++;
+
+      if (count === 1) {
+        noBtn.innerText = "Are you sure?";
+      } else if (count === 2) {
+        noBtn.innerText = "Please don't do that 🥺";
+      } else if (count === 3) {
+        noBtn.innerText = "I will be sad 😢";
+      } else if (count === 4) {
+        noBtn.innerText = "No 😁 you should click YES";
+      } else {
+        const x = Math.random() * (window.innerWidth - 120);
+        const y = Math.random() * (window.innerHeight - 120);
+        noBtn.style.position = "absolute";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+      }
+    }
+
+    function goGift() {
+      window.location.href = "gift.html";
+    }
+  </script>
+</body>
+</html>
